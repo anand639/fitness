@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>MP-Fitness</title>
+		<link rel="icon" type="image/x-icon" href="./LOGO.png" />
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+		/>
+
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+		/>
+		<link rel="stylesheet" href="./css/style.css" />
+	</head>
+
+	<body>
+		<!-- header section  start-->
+
+		<header class="header">
+			<a href="./index.html" class="logo"
+				><img class="logo-img" src="./LOGO2.png"
+			/></a>
+
+			<div id="menu-btn" class="fas fa-bars"></div>
+
+			<nav class="navbar">
+				<a href="#home">Home</a>
+				<a href="#about">About</a>
+				<a href="#features">Features</a>
+				<a href="#pricing">Pricing</a>
+				<a href="#trainers">Trainers</a>
+				<a href="#blogs">Blogs</a>
+				<a href="./contact.html" id="join">Join Now</a>
+			</nav>
+		</header>
+
+		<!-- header section  end-->
+		<!-- special offer section begin  -->
+		<!-- 
+		<div id="boxes">
+			<div
+				style="top: 50%; left: 50%; display: none"
+				id="dialog"
+				class="window"
+			>
+				<div id="san">
+					<a href="#" class="close agree"
+						><img
+							src="data:image/jpeg;base64,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"
+							width="25"
+							style="float: right; margin-right: -25px; margin-top: -20px"
+					/></a>
+					<img class="offer" src="./offer.jpeg" width="450" />
+				</div>
+			</div>
+			<div
+				style="
+					width: 2478px;
+					font-size: 32pt;
+					color: white;
+					height: 1202px;
+					display: none;
+					opacity: 0.4;
+				"
+				id="mask"
+			></div>
+		</div> -->
+
+		<!-- special offer section end  -->
+
+		<!-- home section  start-->
+
+		<section class="home" id="home">
+			<div class="swiper home-slider">
+				<div class="swiper-wrapper">
+					<div
+						class="swiper-slide slide"
+						style="background: url(./images/home-bg-1.png) no-repeat"
+					>
+						<div class="content">
+							<span>Be strong, Be fit</span>
+							<h3>Make yourself stronger than your excuses.</h3>
+							<a href="./contact.html" class="btn"> Get Started</a>
+						</div>
+					</div>
+
+					<div
+						class="swiper-slide slide"
+						style="background: url(./images/home-bg-2.jpg) no-repeat"
+					>
+						<div class="content">
+							<span>Be strong, Be fit</span>
+							<h3>Make yourself stronger than your excuses.</h3>
+							<a href="#" class="btn"> Get Started</a>
+						</div>
+					</div>
+
+					<div
+						class="swiper-slide slide"
+						style="background: url(./images/home-bg-3.jpg) no-repeat"
+					>
+						<div class="content">
+							<span>Be strong, Be fit</span>
+							<h3>Make yourself stronger than your excuses.</h3>
+							<a href="#" class="btn"> Get Started</a>
+						</div>
+					</div>
+				</div>
+
+				<div class="swiper-pagination"></div>
+			</div>
+		</section>
+
+		<!-- home section  end-->
+
+		<!-- about section  start-->
+		<section class="about" id="about">
+			<div class="image">
+				<img src="./images/about-img.jpg" />
+			</div>
+
+			<div class="content">
+				<span>About Us</span>
+				<h3 class="title">Everyday is a chance to become better</h3>
+				<p>
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni
+					pariatur, illo voluptates deleniti rem optio ullam cum, voluptate
+					natus quia culpa ratione consectetur, ea libero dignissimos. Iste
+					repellendus ut optio?
+				</p>
+				<div class="box-container">
+					<div class="box">
+						<h3><i class="fas fa-check"></i>Body and Mind</h3>
+						<p>
+							Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ducimus
+							nihil maxime aperiam qui obcaecati magnam ab
+						</p>
+					</div>
+
+					<div class="box">
+						<h3><i class="fas fa-check"></i>Healthy Life</h3>
+						<p>
+							Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ducimus
+							nihil maxime aperiam qui obcaecati magnam ab
+						</p>
+					</div>
+
+					<div class="box">
+						<h3><i class="fas fa-check"></i>Strategies</h3>
+						<p>
+							Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ducimus
+							nihil maxime aperiam qui obcaecati magnam ab
+						</p>
+					</div>
+
+					<div class="box">
+						<h3><i class="fas fa-check"></i>Workout</h3>
+						<p>
+							Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ducimus
+							nihil maxime aperiam qui obcaecati magnam ab
+						</p>
+					</div>
+				</div>
+				<a href="./contact.html" class="btn">Read More</a>
+			</div>
+		</section>
+
+		<!-- about section  end-->
+
+		<!-- features section  start-->
+
+		<section class="features" id="features">
+			<h1 class="heading"><span>Gym Features</span></h1>
+			<div class="box-container">
+				<div class="box">
+					<div class="image">
+						<img src="./images/f-img-1.jpg" />
+					</div>
+					<div class="content">
+						<img src="./images/icon-1.png" />
+						<h3>Body Building</h3>
+						<p>
+							Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores
+							doloribus aut exercitationem.
+						</p>
+						<a href="./contact.html" class="btn">Read More</a>
+					</div>
+				</div>
+
+				<div class="box second">
+					<div class="image">
+						<img src="./images/f-img-2.jpg" />
+					</div>
+					<div class="content">
+						<img src="./images/icon-2.png " />
+						<h3>Gym For Male</h3>
+						<p>
+							Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores
+							doloribus aut exercitationem.
+						</p>
+						<a href="./contact.html" class="btn">Read More</a>
+					</div>
+				</div>
+
+				<div class="box">
+					<div class="image">
+						<img src="./images/f-img-3.jpg" />
+					</div>
+					<div class="content">
+						<img src="./images/icon-3.png" />
+						<h3>Gym For Female</h3>
+						<p>
+							Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores
+							doloribus aut exercitationem.
+						</p>
+						<a href="./contact.html" class="btn">Read More</a>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- features section  end-->
+
+		<!-- pricing section  starts-->
+
+		<section class="pricing" id="pricing">
+			<div class="information">
+				<span>Pricing Plan</span>
+				<h3>Affordable Pricing Plan For You</h3>
+				<p>
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora,
+					tempore odio ipsa adipisci magni, exercitationem harum quam.
+				</p>
+				<p><i class="fas fa-check"></i>Cardio Exercise</p>
+				<p><i class="fas fa-check"></i>Weight Training</p>
+				<p><i class="fas fa-check"></i>Diet Plan</p>
+				<p><i class="fas fa-check"></i>Overall Result</p>
+				<a href="./contact.html" class="btn">All Pricing</a>
+			</div>
+
+			<div class="plan basic">
+				<h3>3/6</h3>
+				<div class="price"><span></span>Month<span>Plan</span></div>
+				<div class="list">
+					<p><i class="fas fa-check"></i> Yoga</p>
+					<p><i class="fas fa-check"></i> Zumba</p>
+					<p><i class="fas fa-check"></i> Aerobics</p>
+					<p><i class="fas fa-check"></i>Diet Plan</p>
+					<p><i class="fas fa-check"></i> Kick Boxing</p>
+					<p><i class="fas fa-check"></i>Overall Result</p>
+					<p><i class="fas fa-check"></i>Personal Training</p>
+					<p><i class="fas fa-check"></i>Cardio & Weight Training</p>
+					<p>
+						<i class="fas fa-check"></i> Strength & Conditioning for Athletes
+					</p>
+				</div>
+				<a href="./contact.html" class="btn">Get Started</a>
+			</div>
+
+			<div class="plan premium">
+				<h3>Premium</h3>
+				<div class="price"><span></span>Annual<span>Plan </span></div>
+				<div class="list">
+					<p><i class="fas fa-check"></i> Yoga</p>
+					<p><i class="fas fa-check"></i> Zumba</p>
+					<p><i class="fas fa-check"></i> Aerobics</p>
+					<p><i class="fas fa-check"></i>Diet Plan</p>
+					<p><i class="fas fa-check"></i> Kick Boxing</p>
+					<p><i class="fas fa-check"></i>Overall Result</p>
+					<p><i class="fas fa-check"></i>Personal Training</p>
+					<p><i class="fas fa-check"></i>Cardio & Weight Training</p>
+					<p>
+						<i class="fas fa-check"></i> Strength & Conditioning for Athletes
+					</p>
+				</div>
+				<a href="./contact.html" class="btn">Get Started</a>
+			</div>
+		</section>
+
+		<!-- pricing section  ends-->
+
+		<!-- trainer section  start-->
+
+		<section class="trainers" id="trainers">
+			<h1 class="heading"><span>Expert Trainers</span></h1>
+			<div class="box-container">
+				<div class="box">
+					<img src="./images/trainer-1.jpg" />
+					<div class="content">
+						<span>Expert Trainer</span>
+						<h3>John Deo</h3>
+						<div class="share">
+							<a href="#" class="fab fa-facebook-f"></a>
+							<a href="#" class="fab fa-twitter"></a>
+							<a href="#" class="fab fa-pinterest"></a>
+							<a href="#" class="fab fa-linkedin"></a>
+						</div>
+					</div>
+				</div>
+
+				<div class="box">
+					<img src="./images/trainer-2.jpg" />
+					<div class="content">
+						<span>Expert Trainer</span>
+						<h3>John Deo</h3>
+						<div class="share">
+							<a href="#" class="fab fa-facebook-f"></a>
+							<a href="#" class="fab fa-twitter"></a>
+							<a href="#" class="fab fa-pinterest"></a>
+							<a href="#" class="fab fa-linkedin"></a>
+						</div>
+					</div>
+				</div>
+
+				<div class="box">
+					<img src="./images/trainer-3.jpg" />
+					<div class="content">
+						<span>Expert Trainer</span>
+						<h3>John Deo</h3>
+						<div class="share">
+							<a href="#" class="fab fa-facebook-f"></a>
+							<a href="#" class="fab fa-twitter"></a>
+							<a href="#" class="fab fa-pinterest"></a>
+							<a href="#" class="fab fa-linkedin"></a>
+						</div>
+					</div>
+				</div>
+
+				<div class="box">
+					<img src="./images/trainer-4.jpg" />
+					<div class="content">
+						<span>Expert Trainer</span>
+						<h3>John Deo</h3>
+						<div class="share">
+							<a href="#" class="fab fa-facebook-f"></a>
+							<a href="#" class="fab fa-twitter"></a>
+							<a href="#" class="fab fa-pinterest"></a>
+							<a href="#" class="fab fa-linkedin"></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- trainer section  end-->
+
+		<!-- banner section  start-->
+
+		<section class="banner">
+			<span>Join Us Now</span>
+			<h3>Get Upto 30% Discount</h3>
+			<p>
+				Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quod deserunt
+				veritatis sunt corporis quae dolores voluptatem. Minus aliquam soluta
+				sapiente suscipit.
+			</p>
+			<a href="./contact.html" class="btn">Get Discount</a>
+		</section>
+
+		<!-- banner section  end-->
+
+		<!-- review section  start-->
+
+		<section class="review">
+			<div class="information">
+				<span>testimonials</span>
+				<h3>What our client says</h3>
+				<p>
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur,
+					sequi?
+				</p>
+
+				<a href="./contact.html" class="btn">Read More</a>
+			</div>
+
+			<div class="swiper review-slider">
+				//script js
+				<div class="swiper-wrapper">
+					//swiper JS implimentation
+
+					<div class="swiper-slide slide">
+						<p>
+							Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem,
+							labore!
+						</p>
+						<div class="user">
+							<img src="./images/pic-1.png" />
+							<div class="info">
+								<h3>john Deo</h3>
+								<span>Designer</span>
+							</div>
+							<i class="fa fa-quote-left"></i>
+						</div>
+					</div>
+
+					<div class="swiper-slide slide">
+						<p>
+							Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem,
+							labore!
+						</p>
+						<div class="user">
+							<img src="./images/pic-2.png" />
+							<div class="info">
+								<h3>Natasha</h3>
+								<span>Model</span>
+							</div>
+							<i class="fa fa-quote-left"></i>
+						</div>
+					</div>
+
+					<div class="swiper-slide slide">
+						<p>
+							Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem,
+							labore!
+						</p>
+						<div class="user">
+							<img src="./images/pic-3.png" />
+							<div class="info">
+								<h3>Bill</h3>
+								<span>Business man</span>
+							</div>
+							<i class="fa fa-quote-left"></i>
+						</div>
+					</div>
+
+					<div class="swiper-slide slide">
+						<p>
+							Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem,
+							labore!
+						</p>
+						<div class="user">
+							<img src="./images/pic-4.png" />
+							<div class="info">
+								<h3>Briew</h3>
+								<span>Designer</span>
+							</div>
+							<i class="fa fa-quote-left"></i>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- review section  end-->
+
+		<!-- blogs section  starts-->
+
+		<div class="blogs" id="blogs">
+			<h1 class="heading">
+				<span>Daily Posts</span>
+			</h1>
+			<div class="swiper blog-slider">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide slide">
+						<div class="image">
+							<img src="./images/blog-1.jpg" />
+						</div>
+						<div class="content">
+							<div class="link">
+								<a href="#">By User | 21st June, 2022</a>
+								<!-- <span>|</span> -->
+								<!-- <a href="#"></a> -->
+							</div>
+							<h3>Fitness is not about being better than someone else.</h3>
+							<p>
+								Lorem ipsum dolor sit, amet consectetur adipisicing elit. Enim,
+								tempora!
+							</p>
+							<a href="./contact.html" class="btn">Read More</a>
+						</div>
+					</div>
+
+					<div class="swiper-slide slide">
+						<div class="image">
+							<img src="./images/blog-2.jpg" />
+						</div>
+						<div class="content">
+							<div class="link"><a href="#">By User | 21st June, 2022</a></div>
+							<h3>Fitness is not about being better than someone else.</h3>
+							<p>
+								Lorem ipsum dolor sit, amet consectetur adipisicing elit. Enim,
+								tempora!
+							</p>
+							<a href="./contact.html" class="btn">Read More</a>
+						</div>
+					</div>
+
+					<div class="swiper-slide slide">
+						<div class="image">
+							<img src="./images/blog-3.jpg" />
+						</div>
+						<div class="content">
+							<div class="link"><a href="#">By User | 21st June, 2022</a></div>
+							<h3>Fitness is not about being better than someone else.</h3>
+							<p>
+								Lorem ipsum dolor sit, amet consectetur adipisicing elit. Enim,
+								tempora!
+							</p>
+							<a href="./contact.html" class="btn">Read More</a>
+						</div>
+					</div>
+
+					<div class="swiper-slide slide">
+						<div class="image">
+							<img src="./images/blog-4.jpg" />
+						</div>
+						<div class="content">
+							<div class="link"><a href="#">By User | 21st June, 2022</a></div>
+							<h3>Fitness is not about being better than someone else.</h3>
+							<p>
+								Lorem ipsum dolor sit, amet consectetur adipisicing elit. Enim,
+								tempora!
+							</p>
+							<a href="./contact.html" class="btn">Read More</a>
+						</div>
+					</div>
+
+					<div class="swiper-slide slide">
+						<div class="image">
+							<img src="./images/blog-5.jpg" />
+						</div>
+						<div class="content">
+							<div class="link"><a href="#">By User | 21st June, 2022</a></div>
+							<h3>Fitness is not about being better than someone else.</h3>
+							<p>
+								Lorem ipsum dolor sit, amet consectetur adipisicing elit. Enim,
+								tempora!
+							</p>
+							<a href="./contact.html" class="btn">Read More</a>
+						</div>
+					</div>
+				</div>
+				<div class="swiper-pagination"></div>
+			</div>
+		</div>
+		<!-- blogs section  end-->
+
+		<!-- Footer section  start-->
+
+		<section class="footer">
+			<div class="box-container">
+				<div class="box">
+					<h3>Quick Links</h3>
+					<a class="links" href="#home">Home</a>
+					<a class="links" href="#about">About</a>
+					<a class="links" href="#features">Features</a>
+					<a class="links" href="#pricing">Pricing</a>
+					<a class="links" href="#trainers">Trainers</a>
+					<a class="links" href="#blogs">Blogs</a>
+					<a href="./contact.html" id="join">Join Now</a>
+				</div>
+
+				<div class="box">
+					<h3>Opening Hours</h3>
+					<p>Monday: <i> 6.00am - 10.00pm </i></p>
+					<p>Tuesday: <i> 6.00am - 10.00pm </i></p>
+					<p>Wednesday: <i> 6.00am - 10.00pm </i></p>
+					<p>Thursday: <i> 6.00am - 10.00pm </i></p>
+					<p>Friday: <i> 6.00am - 10.00pm </i></p>
+					<p>Saturday: <i> 6.00am - 10.00pm </i></p>
+					<p>Sunday: <i> 8.00am - 12.00pm </i></p>
+				</div>
+
+				<div class="box">
+					<h3>Contact Us</h3>
+					<p><i class="fa fa-phone"></i>+91-8077714214</p>
+					<p><i class="fa fa-phone"></i>+91-9140572741</p>
+					<p><i class="fa fa-envelope"></i>mdmohit@mpfitness.in</p>
+					<p><i class="fa fa-envelope"></i>mdprakhar@mpfitness.in</p>
+					<p><i class="fa fa-map"></i>Kanpur, India-200800</p>
+					<div class="share">
+						<a href="" class="fab fa-facebook"></a>
+						<a href="" class="fab fa-instagram"></a>
+						<a href="" class="fab fa-twitter"></a>
+						<a href="" class="fab fa-pinterest"></a>
+					</div>
+				</div>
+				<div class="box">
+					<h3>Newsletter</h3>
+					<p>Subscribe For Latest Updates</p>
+					<form action="">
+						<input
+							type="email"
+							name=""
+							class="email"
+							placeholder="Enter Your Email"
+						/>
+						<input type="submit" value="Subscribe" class="btn" />
+					</form>
+				</div>
+			</div>
+		</section>
+
+		<!-- Footer section  end-->
+
+		<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.js"></script>
+		<script src="./js/script.js"></script>
+	</body>
+</html>
